@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>kateh.net</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -13,50 +13,49 @@
     <div class="container">
         <h1 class="fade-title">kateh.net<span class="cursor">_</span></h1>
 
-        <!-- INTRO TEXT -->
         <p class="fade-item intro-text">
             Hi! I'm Kate. I'm a music production student, and I'm working on learning development on the side.
         </p>
 
-        <!-- SUBTITLE -->
         <p class="fade-item subtitle">she/her</p>
 
         <ul>
             <li class="fade-item">
                 <a href="https://github.com/katehpr" target="_blank">
-                    <img src="github.png" alt="GitHub logo" class="icon"> github
+                    <img src="./github.png" alt="GitHub logo" class="icon"> github
                 </a>
             </li>
             <li class="fade-item">
                 <a href="https://www.last.fm/user/katehpr" target="_blank">
-                    <img src="lastfm.png" alt="Last.fm logo" class="icon"> last.fm
+                    <img src="./lastfm.png" alt="Last.fm logo" class="icon"> last.fm
                 </a>
             </li>
             <li class="fade-item">
                 <a href="https://x.com/kkate8kk" target="_blank">
-                    <img src="twitter.png" alt="Twitter logo" class="icon"> twitter
+                    <img src="./twitter.png" alt="Twitter logo" class="icon"> twitter
                 </a>
             </li>
         </ul>
     </div>
 
-    <!-- FOOTER WITH GIF AND STATIC TEXT -->
     <footer>
-        <img src="macmade.gif" alt="MacMade" class="footer-gif">
+        <img src="./macmade.gif" alt="MacMade" class="footer-gif">
         <span class="footer-text">2026 kate h</span>
     </footer>
 
     <div id="spotlight"></div>
 
     <script>
-        const spot = document.getElementById("spotlight");
+        document.addEventListener("DOMContentLoaded", () => {
+            const spot = document.getElementById("spotlight");
 
-        if (matchMedia("(hover: hover) and (pointer: fine)").matches) {
-            document.addEventListener("mousemove", e => {
-                spot.style.opacity = 1;
-                spot.style.background = `radial-gradient(circle 150px at ${e.clientX}px ${e.clientY}px, rgba(255,255,255,0.25), transparent 70%)`;
-            });
-        }
+            if (matchMedia("(hover: hover) and (pointer: fine)").matches) {
+                document.addEventListener("mousemove", e => {
+                    spot.style.opacity = 1;
+                    spot.style.background = `radial-gradient(circle 150px at ${e.clientX}px ${e.clientY}px, rgba(255,255,255,0.25), transparent 70%)`;
+                });
+            }
+        });
     </script>
 </body>
 </html>
