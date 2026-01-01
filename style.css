@@ -57,13 +57,11 @@ body {
 /* ORDER DELAYS */
 .intro-text { animation-delay: 0.4s; font-size:1rem; margin:5px 0 15px 0; }
 .subtitle { animation-delay: 0.6s; margin-bottom:20px; color: rgba(255,255,255,0.7); }
-
-/* LINKS */
-ul { list-style: none; padding: 0; margin: 0; }
 ul li.fade-item:nth-child(1) { animation-delay: 0.8s; font-size:1.3rem; margin:10px 0; }
 ul li.fade-item:nth-child(2) { animation-delay: 1s; font-size:1.3rem; margin:10px 0; }
 ul li.fade-item:nth-child(3) { animation-delay: 1.2s; font-size:1.3rem; margin:10px 0; }
 
+/* LINKS */
 a {
     color:white;
     text-decoration:none;
@@ -74,23 +72,10 @@ a {
 }
 
 /* SOCIAL LINK HOVER COLORS */
-ul li:nth-child(1) a:hover { 
-    color:#BFFFD1; 
-    transform:translateX(4px);
-}
-ul li:nth-child(1) a:hover .icon { transform:scale(1.15); filter: none; }
-
-ul li:nth-child(2) a:hover { 
-    color:#D51007; 
-    transform:translateX(4px);
-}
-ul li:nth-child(2) a:hover .icon { transform:scale(1.15); filter: none; }
-
-ul li:nth-child(3) a:hover { 
-    color:#1DA1F2; 
-    transform:translateX(4px);
-}
-ul li:nth-child(3) a:hover .icon { transform:scale(1.15); filter: none; }
+.social-link.github:hover { color: #BFFFD1; transform: translateX(4px); }
+.social-link.lastfm:hover { color: #D51007; transform: translateX(4px); }
+.social-link.twitter:hover { color: #1DA1F2; transform: translateX(4px); }
+.social-link:hover .icon { transform: scale(1.15); }
 
 .icon { width:20px;height:20px;transition:0.2s; }
 
@@ -102,35 +87,28 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 4px; /* space between gif and text */
+    gap: 4px;
 }
 
 /* FOOTER GIF */
 .footer-gif {
     height: auto;
     width: auto;
-    max-height: 24px;       /* proportional to footer text */
+    max-height: 24px;
     object-fit: contain;
-    pointer-events: none;   /* ignore hover/click */
+    pointer-events: none;
 }
 
 /* STATIC FOOTER TEXT */
 .footer-text {
     font-size: 0.85rem;
-    color: rgba(255,255,255,0.5); /* greyed out */
+    color: rgba(255,255,255,0.5);
 }
 
 /* ANIMATIONS */
 @keyframes fadein { to { opacity:1; } }
 @keyframes blink { 50% { opacity:0; } }
-/* rise animation: fade from nothing and move up */
 @keyframes rise {
-    from {
-        opacity: 0;
-        transform: translateY(6px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
 }
