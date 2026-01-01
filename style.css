@@ -62,22 +62,30 @@ ul li.fade-item:nth-child(2) { animation-delay: 1s; font-size:1.3rem; margin:10p
 ul li.fade-item:nth-child(3) { animation-delay: 1.2s; font-size:1.3rem; margin:10px 0; }
 
 /* LINKS */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
 a {
     color:white;
     text-decoration:none;
     display:inline-flex;
     align-items:center;
     gap:8px;
-    transition:0.2s;
+    transition: color 0.2s, transform 0.2s;
+    position: relative;
 }
 
-/* SOCIAL LINK HOVER COLORS */
+/* ICON */
+.icon { width:20px; height:20px; transition:0.2s; }
+
+/* SOCIAL LINK HOVER COLORS & ICON SCALE */
 .social-link.github:hover { color: #BFFFD1; transform: translateX(4px); }
 .social-link.lastfm:hover { color: #D51007; transform: translateX(4px); }
 .social-link.twitter:hover { color: #1DA1F2; transform: translateX(4px); }
 .social-link:hover .icon { transform: scale(1.15); }
-
-.icon { width:20px;height:20px;transition:0.2s; }
 
 /* FOOTER CENTERED STACK */
 footer {
